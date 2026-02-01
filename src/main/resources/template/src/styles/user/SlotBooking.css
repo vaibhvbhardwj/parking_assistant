@@ -1,0 +1,158 @@
+.booking-modal {
+  max-width: 600px;
+}
+
+.booking-details {
+  padding: 1.5rem;
+}
+
+.info-section,
+.form-section,
+.price-section {
+  margin-bottom: 1.5rem;
+}
+
+.info-section h3,
+.price-section h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-row span {
+  color: var(--textDim);
+}
+
+.detail-row strong {
+  color: var(--text);
+}
+
+.form-section label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.form-section select,
+.form-section input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.form-section small {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--textDim);
+  font-size: 0.85rem;
+}
+
+.error-text {
+  color: #EF4444;
+  font-size: 0.9rem;
+}
+
+.price-section {
+  background: var(--background);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.price-row.total {
+  border-top: 2px solid var(--border);
+  margin-top: 0.5rem;
+  padding-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.price-note {
+  display: block;
+  margin-top: 0.75rem;
+  color: var(--textDim);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.error-message {
+  background: #FEE2E2;
+  color: #DC2626;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-primary {
+  flex: 1;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 106, 255, 0.3);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: var(--background);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: var(--border);
+}
+
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column-reverse;
+  }
+}

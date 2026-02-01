@@ -1,0 +1,282 @@
+.slot-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.floor-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.floor-selector svg {
+  color: var(--primary);
+}
+
+.floor-selector select {
+  padding: 0.5rem 1rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bulk-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.selected-count {
+  color: var(--primary);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 106, 255, 0.1);
+  border-radius: 8px;
+}
+
+.bulk-actions select {
+  padding: 0.5rem 1rem;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  min-width: 200px;
+}
+
+.slot-legend {
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text);
+}
+
+.legend-box {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid var(--border);
+}
+
+.legend-box.available {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.legend-box.booked {
+  background: var(--danger);
+  border-color: var(--danger);
+}
+
+.legend-box.maintenance {
+  background: var(--warning);
+  border-color: var(--warning);
+}
+
+.legend-box.ev {
+  background: #06B6D4;
+  border-color: #06B6D4;
+}
+
+.legend-box.handicapped {
+  background: #8B5CF6;
+  border-color: #8B5CF6;
+}
+
+.legend-box.reserved {
+  background: #F59E0B;
+  border-color: #F59E0B;
+}
+
+.slot-grid-container {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+.slot-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: max-content;
+}
+
+.slot-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.slot-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.slot-box:hover:not(.empty) {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.slot-box.available {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--success);
+  border-color: var(--success);
+}
+
+.slot-box.booked {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+  border-color: var(--danger);
+  cursor: not-allowed;
+}
+
+.slot-box.maintenance {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--warning);
+  border-color: var(--warning);
+}
+
+.slot-box.ev {
+  background: rgba(6, 182, 212, 0.2);
+  color: #06B6D4;
+  border-color: #06B6D4;
+}
+
+.slot-box.handicapped {
+  background: rgba(139, 92, 246, 0.2);
+  color: #8B5CF6;
+  border-color: #8B5CF6;
+}
+
+.slot-box.reserved {
+  background: rgba(245, 158, 11, 0.2);
+  color: #F59E0B;
+  border-color: #F59E0B;
+}
+
+.slot-box.selected {
+  box-shadow: 0 0 0 3px var(--primary);
+  transform: scale(1.05);
+}
+
+.slot-box.empty {
+  background: transparent;
+  border: 2px dashed var(--border);
+  cursor: default;
+}
+
+.slot-box.empty:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.slot-number {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h2 {
+  margin: 0 0 1.5rem 0;
+  color: var(--text);
+}
+
+.preview-info {
+  padding: 1rem;
+  background: var(--background);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.preview-info p {
+  margin: 0.25rem 0;
+  color: var(--textDim);
+  font-size: 0.875rem;
+}
+
+.preview-info strong {
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .slot-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .bulk-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .slot-legend {
+    gap: 1rem;
+  }
+
+  .slot-box {
+    width: 50px;
+    height: 50px;
+    font-size: 0.7rem;
+  }
+}

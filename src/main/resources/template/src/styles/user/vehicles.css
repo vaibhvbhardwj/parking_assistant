@@ -1,0 +1,33 @@
+.vehicles-page {
+  padding: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.vehicle-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.vehicle-form input,
+.vehicle-form select {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+.vehicle-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.vehicle-card {
+  background: #9ca7b8;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}

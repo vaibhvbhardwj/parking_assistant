@@ -1,0 +1,219 @@
+.parking-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1.5rem;
+}
+
+.parking-area-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.parking-area-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.area-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.area-title {
+  display: flex;
+  gap: 1rem;
+}
+
+.area-title svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.area-title h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.25rem 0;
+}
+
+.company-name {
+  font-size: 0.875rem;
+  color: var(--textDim);
+  margin: 0;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge.success {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--success);
+}
+
+.status-badge.warning {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--warning);
+}
+
+.status-badge.danger {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+}
+
+.area-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--background);
+  border-radius: 8px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detail-item .label {
+  font-size: 0.75rem;
+  color: var(--textDim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.detail-item .value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.area-address {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: var(--background);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: var(--textDim);
+  font-size: 0.875rem;
+}
+
+.area-address svg {
+  flex-shrink: 0;
+}
+
+.area-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  flex: 1;
+}
+
+.btn-action.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-action.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-action.btn-success {
+  background: var(--success);
+  color: white;
+}
+
+.btn-action.btn-success:hover {
+  background: var(--secondary-hover);
+  transform: translateY(-2px);
+}
+
+.btn-action.btn-secondary {
+  background: var(--background);
+  color: var(--text);
+  border: 1px solid var(--border);
+  flex: 0;
+  padding: 0.5rem;
+}
+
+.btn-action.btn-secondary:hover {
+  background: var(--border);
+}
+
+.btn-action.btn-danger {
+  background: var(--background);
+  color: var(--danger);
+  border: 1px solid var(--border);
+  flex: 0;
+  padding: 0.5rem;
+}
+
+.btn-action.btn-danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.loading-state, .empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.empty-state svg {
+  color: var(--textDim);
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.5rem 0;
+}
+
+.empty-state p {
+  color: var(--textDim);
+  margin: 0 0 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .parking-areas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .area-details {
+    grid-template-columns: 1fr;
+  }
+}

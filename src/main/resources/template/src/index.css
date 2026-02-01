@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Color Variables */
+  --primary: #006AFF;
+  --primary-hover: #0056CC;
+  --secondary: #10B981;
+  --secondary-hover: #059669;
+  --danger: #EF4444;
+  --warning: #F59E0B;
+  --success: #10B981;
+  
+  /* Background Colors */
+  --background: #ffffff;
+  --card: #ffffff;
+  --border: #97a7bb;
+  
+  /* Text Colors */
+  --text: #000000;
+  --textDim: #000000;
+  
+  color-scheme: dark;
+  color: var(--text);
+  background-color: var(--background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main, .hero-section {
+  padding-top: 30px;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+/* Global scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--textDim);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+.leaflet-popup-content {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Common Button Styles */
+button {
+  font-family: inherit;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Recharts Tooltip Styling */
+.recharts-default-tooltip {
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+}
+
+.recharts-tooltip-label {
+  color: var(--text) !important;
+}
+
+.recharts-tooltip-item {
+  color: var(--textDim) !important;
+}

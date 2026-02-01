@@ -1,0 +1,324 @@
+.parking-details {
+  max-width: 1000px;
+}
+
+.parking-info-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem;
+  background: var(--background);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.info-card svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.info-card div {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card strong {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.info-card small {
+  color: var(--textDim);
+  font-size: 0.85rem;
+}
+
+.amenities {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.amenities h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text);
+}
+
+.amenity-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.amenity-tag {
+  background: var(--primary);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.floor-section {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.floor-section h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text);
+}
+
+.floor-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.floor-tab {
+  background: var(--background);
+  border: 2px solid var(--border);
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.floor-tab small {
+  font-size: 0.75rem;
+  color: var(--textDim);
+  font-weight: normal;
+}
+
+.floor-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.floor-tab.active small {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.floor-tab:hover:not(.active) {
+  border-color: var(--primary);
+  background: var(--card);
+}
+
+.slot-grid-section {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.slot-grid-section h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text);
+}
+
+.slot-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--background);
+  border-radius: 8px;
+}
+
+.slot-legend span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--textDim);
+}
+
+.legend-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.legend-box.available {
+  background: #10B981;
+}
+
+.legend-box.booked {
+  background: #6B7280;
+}
+
+.legend-box.handicapped {
+  background: #3B82F6;
+}
+
+.legend-box.ev {
+  background: #8B5CF6;
+}
+
+.legend-box.maintenance {
+  background: #F59E0B;
+}
+
+.slot-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--textDim);
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 12px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+  background: var(--background);
+  border-radius: 8px;
+}
+
+.slot-item {
+  aspect-ratio: 1;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: white;
+  position: relative;
+}
+
+.slot-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+.slot-item span {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.slot-type-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 0.6rem;
+  background: var(--primary);
+  color: white;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.slot-item.available {
+  border-color: #10B981;
+  color: #10B981;
+}
+
+.slot-item.available:hover {
+  background: #10B981;
+  color: white;
+  transform: scale(1.05);
+}
+
+.slot-item.booked {
+  background: #6B7280;
+  color: white;
+  border-color: #6B7280;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.slot-item.under_maintenance {
+  background: #F59E0B;
+  color: white;
+  border-color: #F59E0B;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.slot-item.handicapped {
+  border-color: #3B82F6;
+}
+
+.slot-item.ev {
+  border-color: #8B5CF6;
+}
+
+.no-slots {
+  text-align: center;
+  padding: 2rem;
+  color: var(--textDim);
+}
+
+.ratings-section {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.ratings-section h3 {
+  margin: 0 0 1rem 0;
+  color: var(--text);
+}
+
+.ratings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rating-card {
+  background: var(--background);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.rating-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.rating-header strong {
+  color: var(--text);
+}
+
+.rating-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.review-text {
+  margin: 0;
+  color: var(--textDim);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .parking-info-section {
+    grid-template-columns: 1fr;
+  }
+
+  .slot-grid {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+}

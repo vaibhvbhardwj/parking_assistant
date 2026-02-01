@@ -1,0 +1,85 @@
+.auth-page {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Tektur", sans-serif;
+  color: white;
+  z-index: 1; /* important */
+}
+
+/* BACKGROUND */
+.auth-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("https://i.pinimg.com/originals/4f/c6/1d/4fc61db3d7c9e5ee46f1a3f32ade7e25.gif");
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* background */
+}
+
+/* LOGIN CARD */
+.wrapper {
+  position: relative;
+  z-index: 2; /* ABOVE background */
+  width: 480px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(0,0,0,0.4); /* IMPORTANT */
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 25px;
+}
+
+.input-field input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  height: 40px;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  top: -5px;
+  font-size: 12px;
+}
+
+button {
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.register {
+  text-align: center;
+  margin-top: 20px;
+}

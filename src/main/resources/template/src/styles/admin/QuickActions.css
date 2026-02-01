@@ -1,0 +1,30 @@
+.qa-container {
+  padding: 20px;
+}
+
+.qa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.qa-card {
+  background: #0f172a;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.qa-card:hover {
+  background: #2563eb;
+  transform: translateY(-4px);
+}
+
+.qa-icon {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 10px;
+}
