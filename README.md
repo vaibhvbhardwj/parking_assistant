@@ -94,7 +94,7 @@ Infosys Internship Program – 2025
 
 ## 👨‍💻 Developer
 Vaibhav Bhardwaj  
-https://vaughv.netlify.app/
+https://vaughav.netlify.app/
 
 ---
 
